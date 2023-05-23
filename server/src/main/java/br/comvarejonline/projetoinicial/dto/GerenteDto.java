@@ -1,6 +1,7 @@
 package br.comvarejonline.projetoinicial.dto;
 
 import br.comvarejonline.projetoinicial.model.Gerente;
+import br.comvarejonline.projetoinicial.model.Perfil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,8 @@ public class GerenteDto {
     private String nome;
     private String email;
     private String senha;
+
+    private Perfil perfil;
 
 
 
