@@ -1,8 +1,7 @@
 package br.comvarejonline.projetoinicial.controllers;
 
 import br.comvarejonline.projetoinicial.Service.implem.GerenteServiceimplemts;
-import br.comvarejonline.projetoinicial.dto.CadastroEstoqueDto;
-import br.comvarejonline.projetoinicial.dto.EstoqueDto;
+import br.comvarejonline.projetoinicial.dto.GerenteCadastroDto;
 import br.comvarejonline.projetoinicial.dto.GerenteDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +23,7 @@ public class GerenteController {
 
 
     @PostMapping
-    public ResponseEntity<GerenteDto> cadastroProduto(@RequestBody @Valid GerenteDto gerenteDto, UriComponentsBuilder builder) {
+    public ResponseEntity<GerenteDto> cadastroProduto(@RequestBody @Valid GerenteCadastroDto gerenteDto, UriComponentsBuilder builder) {
 
         GerenteDto dto = gerenteServiceimplemts.cadastrarGerente(gerenteDto);
 

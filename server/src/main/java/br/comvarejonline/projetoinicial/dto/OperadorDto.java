@@ -12,4 +12,6 @@ public class OperadorDto {
     private String email;
     private String senha;
 
+    private PerfilDto perfilDto;
+
 }

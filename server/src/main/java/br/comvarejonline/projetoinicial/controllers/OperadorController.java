@@ -1,7 +1,7 @@
 package br.comvarejonline.projetoinicial.controllers;
 
 import br.comvarejonline.projetoinicial.Service.implem.OperadorServiceimplemts;
-import br.comvarejonline.projetoinicial.dto.GerenteDto;
+import br.comvarejonline.projetoinicial.dto.CadastroOperadorDto;
 import br.comvarejonline.projetoinicial.dto.OperadorDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,9 +23,9 @@ public class OperadorController {
 
 
     @PostMapping
-    public ResponseEntity<OperadorDto> cadastroProduto(@RequestBody @Valid OperadorDto operadorDto, UriComponentsBuilder builder) {
+    public ResponseEntity<OperadorDto> cadastroProduto(@RequestBody @Valid CadastroOperadorDto cadastroOperadorDto, UriComponentsBuilder builder) {
 
-        OperadorDto dto = operadorServiceimplemts.cadastrarOperador(operadorDto);
+        OperadorDto dto = operadorServiceimplemts.cadastrarOperador(cadastroOperadorDto);
 
         URI uri = builder.path("/operador/{id}").buildAndExpand(dto.getId()).toUri();
         return ResponseEntity.created(uri).body(dto);

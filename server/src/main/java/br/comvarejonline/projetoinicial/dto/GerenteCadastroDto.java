@@ -6,12 +6,14 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class GerenteDto {
+public class GerenteCadastroDto {
+
     private Long id;
     private String nome;
     private String email;
     private String senha;
+    private Long perfilId;
 
-    private PerfilDto perfil;
+
 
 }
