@@ -38,6 +38,9 @@ public class SecurityConfiguracoes {
     }
     @Bean
     protected SecurityFilterChain filterChain  (HttpSecurity httpSecurity) throws Exception {
+        
+        String gerente = "GERENTE";
+        String operador = "OPERADOR";
 
         httpSecurity.authorizeHttpRequests()
                 .antMatchers(HttpMethod.POST,"/login").permitAll()
